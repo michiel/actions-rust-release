@@ -180,6 +180,6 @@ runs:
       if: ( github.ref_type == 'tag' && startsWith( github.ref_name, inputs.release-tag-prefix ) ) || inputs._force-release-for-testing
 
     - name: Publish GitHub release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
       with: ${{ steps.action-gh-release-parameters.outputs }}
       if: ( github.ref_type == 'tag' && startsWith( github.ref_name, inputs.release-tag-prefix ) ) || inputs._force-release-for-testing
